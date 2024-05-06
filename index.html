@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <link rel="stylesheet" href="style_1.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Data Visualization Dashboard</h1>
+    </header>
+    <main>
+        <form id="dataForm">
+            <label for="data">Enter Data (comma-separated):</label>
+            <input type="text" id="data" name="data">
+            <label for="visualizationType">Choose Visualization Type:</label>
+            <select id="visualizationType" name="visualizationType">
+                <option value="bar">Bar Chart</option>
+                <option value="line">Line Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+            <button type="submit">Visualize Data</button>
+            <form id="dataForm" method="POST" action="/submitData">
+        </form>
+
+        <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
